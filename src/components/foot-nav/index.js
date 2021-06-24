@@ -1,3 +1,3 @@
-import FootNav from "./foot-nav.vue";
+import FootNav from './foot-nav.vue'
 
-export default FootNav;
+export default FootNav

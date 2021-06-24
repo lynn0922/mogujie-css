@@ -1,3 +1,3 @@
-import Launch from "./launch.vue";
+import Launch from './launch.vue'
 
-export default Launch;
+export default Launch

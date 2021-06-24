@@ -1,3 +1,3 @@
-import Magazine from "./magazine.vue";
+import Magazine from './magazine.vue'
 
-export default Magazine;
+export default Magazine

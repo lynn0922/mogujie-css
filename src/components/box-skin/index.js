@@ -1,3 +1,3 @@
-import BoxSkin from "./box-skin.vue";
+import BoxSkin from './box-skin.vue'
 
-export default BoxSkin;
+export default BoxSkin
