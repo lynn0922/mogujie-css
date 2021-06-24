@@ -34,3 +34,10 @@ export const getChats = () =>
             token: store.state.token
         }
     })
+
+export const getUserInfo = () => {
+    return request({
+        url: '/userInfo',
+        method: 'get'
+    })
+}

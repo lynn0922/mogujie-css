@@ -94,6 +94,7 @@
     import { Swipe, SwipeItem } from '@/components/swipe'
     import { onMounted, reactive, toRefs } from 'vue'
     import { getRecommendatoryCategorys, getBanners, getBrandVideos } from '@/api/mall'
+    // import { getUserInfo } from '@/api/me'
     import { getChats } from '@/api/me'
     import { useRouter } from 'vue-router'
     import Toast from 'vant/lib/toast'
@@ -140,6 +141,10 @@
                 getBrandVideos().then((res) => {
                     data.brandList = res.data
                 })
+
+                // getUserInfo().then((res) => {
+                //     console.log(res)
+                // })
             })
 
             const list = [
