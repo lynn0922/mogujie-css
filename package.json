@@ -1,43 +1,47 @@
 {
-  "name": "mogujie",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "node ./addMock-service.js&& vue-cli-service serve",
-    "build": "node ./delMock-service.js&& vue-cli-service build",
-    "lint": "vue-cli-service lint --fix"
-  },
-  "dependencies": {
-    "axios": "^0.21.1",
-    "bourbon": "^7.0.0",
-    "core-js": "^3.6.5",
-    "lib-flexible": "^0.3.2",
-    "mockjs": "^1.1.0",
-    "normalize.css": "^8.0.1",
-    "vant": "^3.1.0-beta.0",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0",
-    "vuex-persistedstate": "^4.0.0-beta.3"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/eslint-config-prettier": "^6.0.0",
-    "babel-eslint": "^10.1.0",
-    "compass-mixins": "^0.12.10",
-    "eslint": "^6.7.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-vue": "^7.0.0",
-    "postcss-plugin-px2rem": "^0.8.1",
-    "postcss-px-to-viewport": "^1.1.1",
-    "prettier": "^2.2.1",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "svg-sprite-loader": "^6.0.7"
-  }
+    "name": "mogujie",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "mock": "vue-cli-service serve --mode mock",
+        "serve": "cross-env BUILD_ENV=development node ./mock-server.js&& vue-cli-service serve --mode development",
+        "build": "cross-env BUILD_ENV=production  node ./mock-server.js&& vue-cli-service build --mode production",
+        "lint": "vue-cli-service lint --fix"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "bourbon": "^7.0.0",
+        "core-js": "^3.6.5",
+        "cross-env": "^7.0.3",
+        "lib-flexible": "^0.3.2",
+        "mockjs": "^1.1.0",
+        "mockjs2": "^1.0.8",
+        "normalize.css": "^8.0.1",
+        "vant": "^3.1.0-beta.0",
+        "vue": "^3.0.0",
+        "vue-router": "^4.0.0-0",
+        "vuex": "^4.0.0-0",
+        "vuex-persistedstate": "^4.0.0-beta.3"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-vuex": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/compiler-sfc": "^3.0.0",
+        "@vue/eslint-config-prettier": "^6.0.0",
+        "babel-eslint": "^10.1.0",
+        "compass-mixins": "^0.12.10",
+        "eslint": "^6.7.2",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-vue": "^7.0.0",
+        "fs-extra": "^10.0.0",
+        "postcss-plugin-px2rem": "^0.8.1",
+        "postcss-px-to-viewport": "^1.1.1",
+        "prettier": "^2.2.1",
+        "sass": "^1.26.5",
+        "sass-loader": "^8.0.2",
+        "svg-sprite-loader": "^6.0.7"
+    }
 }

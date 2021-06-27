@@ -1,3 +1,3 @@
-import Columns from "./columns.vue";
+import Columns from './columns.vue'
 
-export default Columns;
+export default Columns

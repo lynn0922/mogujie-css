@@ -1,3 +1,3 @@
-import Category from "./category.vue";
+import Category from './category.vue'
 
-export default Category;
+export default Category

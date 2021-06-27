@@ -1,3 +1,3 @@
-import FastMenu from "./fast-menu.vue";
+import FastMenu from './fast-menu.vue'
 
-export default FastMenu;
+export default FastMenu
