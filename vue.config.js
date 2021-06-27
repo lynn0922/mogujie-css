@@ -5,7 +5,8 @@
 // }
 
 module.exports = {
-  publicPath: process.env.NODE_ENV === "production" ? "/mogujie/" : "/",
+  publicPath: process.env.NODE_ENV === "production" ? "/" : "/",
+
   devServer: {
     // proxy: {
     //   "/api/*": {

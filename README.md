@@ -470,3 +470,55 @@ SMACSS 的核心是分类；它总共分为**五大类**：
 - 2.  寻找页面多次出现的相似结构， 例如， flex 布局， list 列表等等， 这个想法是通过对 元素结构方面的思考。
 
 那么为什么我们要从这两个点出发寻找我们的组件呢？ 第一点不用多做解释，相信大家都懂， 那么第二点，为什么要从结构去入手寻找？ 这就涉及到我们之前说的， `components` 层其实就是在写组件，在原生开发中，它遵守 `结构与皮肤分离` 原则， 它跟 皮肤(例如 背景色，字体大小，宽高等)无关，换个思维， 组件是什么？ 组件不就是结构嘛， 我们写组件就是在写它的结构， 所以 `components` 的本质就是 `OOCSS` 。
+
+## 字体压缩
+
+移动端如果需要使用字体的话会导致体积剧增， 特别是一个字体包，随便就到达了十几 M 的情况下，我们就不得不重视起字体压缩这个问题。
+
+项目中我找到了一款名叫 `font-spider`（字蛛） 的字体压缩工具，接下来我们就来看看如何使用它吧。
+
+首先是安装这个工具：`npm install font-spider -g` , 之后我们需要创建个文件夹，来测试我们的字体是否可用。
+
+- 创建文件夹， 在文件夹内分别创建一个 `index.html` , 内容如下：
+
+    <!DOCTYPE html>
+
+      <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <!-- 使用字体包 -->
+          <link rel="stylesheet" href="./css/index.css" />
+          <title>Document</title>
+        </head>
+        <body>
+          <h1>使用字体压缩</h1>
+
+          /* 使用字体 */
+          <style>
+            h1 {
+              font-family: gf;
+            }
+          </style>
+        </body>
+
+    </html>
+
+- 接着创建文件夹`css`, 并新建 `index.css` , 内容如下：
+
+      /* 使用字体 */
+      @font-face {
+        font-family: gf;
+        src: url("./font/gf.ttf");
+      }
+
+      // 我这里所使用的字体包高达 `10M` 。
+
+- 最后别忘了把字体也放进来蛤，这个就不说怎么做了吧。
+
+万事俱备， 我们来使用这个字体压缩工具， 看看效果， 进入这个项目根目录， 控制台输入命令：
+
+    font-spider index.html
+
+等待程序运行结束， 你会惊讶的发现， `10m` 的字体包被压缩成了`20k` 左右了, 把这个压缩后的字体文件拷贝放到你真正需要使用的项目中就可以啦。
