@@ -9,4 +9,7 @@ import '@/mock'
 import 'lib-flexible/flexible.js'
 import 'vant/lib/toast/style'
 
+import '@/utils/FCP'
+import '@/utils/FMP'
+
 createApp(App).use(mgjUI).use(store).use(router).mount('#app')
